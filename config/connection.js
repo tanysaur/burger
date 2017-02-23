@@ -9,11 +9,13 @@ var connectionInfo = mysql.createConnection({
   database: "burgers_db"
 });
 
-var connection = mysql.createConnection(connectionInfo);
-
 if(process.env.JAWSDB_URL){
   connectionInfo = process.env.JAWSDB_URL;
 }
+
+var connection = mysql.createConnection(connectionInfo);
+
+
 
 // Make connection.
 connection.connect(function(err) {
